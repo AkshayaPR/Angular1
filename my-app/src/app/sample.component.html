@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    alert("Welcome {{name}}");
+  });
+
+</script>
+
+<body>
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+    <h2>LoGiN PaGe:</h2>
+    <img width="500" src="https://secure.ntrust.com/img/assets/webapp-logo-og.png">
+    <form>
+
+      <div class="container">
+<!--         Name<input type="text" class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" required minlength="5"
+          placeholder="Name">
+        <p>{{name}}</p>
+ -->
+        UserId <input type="id" class="form-control" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" placeholder="id">
+        Id <input type="id" class="form-control" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" placeholder="id">
+        tilte <input type="text" class="form-control" [(ngModel)]="title" [ngModelOptions]="{standalone: true}" placeholder="title">
+        Body <input type="text" class="form-control" [(ngModel)]="body" [ngModelOptions]="{standalone: true}" placeholder="Description">
+
+
+        <br/>
+
+       <!--  <div>
+          <br/> Country
+          <select>
+           <option>Select country</option> 
+           <option>India</option> 
+           <option>US</option> 
+           <option>Canada<option>
+          </select>
+        </div> -->
+
+        <br/>
+
+        <div class="form-group">
+
+          <div class="col-sm-offset-2 col-sm-8">
+            <!--  <button type="submit" class="btn btn-success">Save</button> -->
+            <button class="btn btn-primary" (click)="onLoad()">Save </button>
+           <!--  <button type="reset" class="btn btn-info">Cancel</button> -->
+          </div>
+
+        </div>
+
+        <div class="container">
+          <table class="table table-bordered">
+            <thead>
+              <tr *ngFor="let x of samples">
+                  <td>{{x.UserId}}</td><br/>
+                <td>{{x.Id}}</td><br/>
+                <td>{{x.Title}}</td><br/>
+                <td>{{x.Body}}</td><br/>
+                <!-- <td>Name</td> -->
+                <td width="200" align="center">Action</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
